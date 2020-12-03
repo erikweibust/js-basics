@@ -161,3 +161,29 @@ function showAddress2(address) {
 
 console.log(showAddress(address));
 showAddress2(address);
+
+// Exercise 2 - Factory and Constructor Functions
+
+// Factory Function
+function createAddress(street, city, zipCode) {
+   return {
+      street:street,
+      city:city,
+      zipCode // if key and value are same you can drop value
+   };
+}
+const add1 = createAddress('2341 Boxwood', 'Allen', 75013);
+console.log(add1);
+
+// Constructor Function
+function Address(street, city, zipCode) {
+   this.street = street;
+   this.city = city;
+   this.zipCode = zipCode;
+}
+
+const add2 = new Address('2341 Boxwood', 'Allen', 75013);
+console.log(add2);
+
+console.log(add1 == add2);
+console.log(add1 === add2);
