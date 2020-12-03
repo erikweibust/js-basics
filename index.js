@@ -141,3 +141,23 @@ const date2 = new Date(2018, 4, 11, 9);
 console.log(now);
 console.log(date1);
 console.log(date2);
+
+// Exercise 1 - Address Object
+const address = { // object literal
+   street: '2341 Boxwood Dr',
+   city: 'Allen',
+   zipCode: 75013
+};
+
+function showAddress(address){
+   return `${address.street}
+${address.city} ${address.zipCode}`
+}
+
+function showAddress2(address) {
+   for(let key in address)
+      console.log(key, address[key]);
+}
+
+console.log(showAddress(address));
+showAddress2(address);
