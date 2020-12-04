@@ -240,3 +240,15 @@ function BlogPost(title, body, author) {
 
 let post = new BlogPost('Hello', 'Gonna be a great post', 'Erik Weibust');
 console.log(post);
+
+// Exercise 6 - Price Range Object
+
+let priceRanges = [
+   { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+   { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+   { label: '$$$', tooltip: 'Expensive', minPerPerson: 20, maxPerPerson: 50 }
+];
+
+let restaurants = [
+   { averagePerPerson: 5 }
+];
