@@ -185,5 +185,5 @@ function Address(street, city, zipCode) {
 const add2 = new Address('2341 Boxwood', 'Allen', 75013);
 console.log(add2);
 
-console.log(add1 == add2);
-console.log(add1 === add2);
+console.log(add1 == add2); // hoping / thinking this may be true
+console.log(add1 === add2); // expect this to be false:w
