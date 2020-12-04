@@ -183,7 +183,25 @@ function Address(street, city, zipCode) {
 }
 
 const add2 = new Address('2341 Boxwood', 'Allen', 75013);
+const add3 = new Address('2341 Boxwood', 'Allen', 75013);
+const add4 = new Address('2341 Boxwood', 'Allen', 75012);
+const add5 = add4;
 console.log(add2);
+console.log(add3);
 
-console.log(add1 == add2); // hoping / thinking this may be true
-console.log(add1 === add2); // expect this to be false:w
+// Exercise 3 - Object Equality
+
+function areEqual(address1, address2) {
+   return address1.street === address2.street &&
+         address1.city === address2.city &&
+         address1.zipCode === address2.zipCode;
+}
+
+console.log(`should be true ${areEqual(add2, add3)}`);
+console.log(`should be false ${areEqual(add3, add4)}`);
+
+function areSame(address1, address2) {
+   return address1 === address2;
+}
+console.log('should be false ' + areSame(add2, add3));
+console.log('should be true ' + areSame(add4, add5));
