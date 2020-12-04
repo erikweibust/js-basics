@@ -205,3 +205,25 @@ function areSame(address1, address2) {
 }
 console.log('should be false ' + areSame(add2, add3));
 console.log('should be true ' + areSame(add4, add5));
+
+// Exercise 4 - Blog Post object
+
+let blogPost = {
+   title: 'Hello World',
+   body: 'This is my Hello World blog post.',
+   author: 'Erik Weibust',
+   views: 100000,
+   comments: [
+      { 
+         author: 'Katie Weibust',
+         body: 'My husband is so smart'
+      },
+      {
+         author: 'Katie Weibust',
+         body: 'And... He\'s so cute.'
+      }
+   ],
+   isLive: false
+};
+
+console.log(blogPost);
