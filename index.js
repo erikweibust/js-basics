@@ -227,3 +227,16 @@ let blogPost = {
 };
 
 console.log(blogPost);
+
+// Exercise 5 - Blog Post Constructor Function
+function BlogPost(title, body, author) {
+   this.title = title;
+   this.body = body;
+   this.author = author;
+   this.views = 0;
+   this.comments = [];
+   this.isLive = false;
+}
+
+let post = new BlogPost('Hello', 'Gonna be a great post', 'Erik Weibust');
+console.log(post);
