@@ -79,3 +79,48 @@ console.log(course7);
 // you are finding a course with the id of 1
 const course8 = coursess.find(course => course.id === 1);
 console.log(course8);
+
+// Removing Elements
+const numbs = [1, 2, 3, 4, 5, 6];
+
+// End
+const last = numbs.pop();
+console.log(numbs);
+
+// Beginning
+const firstt = numbs.shift();
+console.log(numbs);
+
+// Middle
+numbers.splice(2, 1);
+console.log(numbs);
+
+// 9 - The Spread Operator
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+const combined1 = first.concat(second); 
+// or with the spread operator
+const combined2 = [...first, 'a', ...second, 'd'];
+console.log(combined2);
+
+// copy an array
+const copy1 = combined1.slice();
+const copy2 = [...combined1];
+
+// 10 - Iterating an Array
+let numbers2 = [1, 2, 3];
+
+for (let number of numbers2)
+   console.log(number);
+
+// forEach
+numbers1.forEach( function(number) {
+   console.log(number);
+});
+
+// forEach with =>
+numbers1.forEach( number => console.log(number));
+
+// forEach with => and index
+numbers1.forEach( (number, index) => console.log(index, number));
