@@ -124,3 +124,17 @@ numbers1.forEach( number => console.log(number));
 
 // forEach with => and index
 numbers1.forEach( (number, index) => console.log(index, number));
+
+// 11 - Joining Arrays
+const numbers3 = [1, 2, 3];
+console.log(numbers3);
+let joined = numbers3.join();
+console.log(joined);
+let joined2 = numbers3.join('-');
+console.log(joined2);
+
+let message = 'This is my first message!';
+let parts = message.split(" ");
+console.log(parts);
+let combined = parts.join('-');
+console.log(combined);
