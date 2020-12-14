@@ -138,3 +138,64 @@ let parts = message.split(" ");
 console.log(parts);
 let combined = parts.join('-');
 console.log(combined);
+
+// 12 - Sorting Arrays
+let unsorted = [
+   { id: 1, name: 'Node.js' },
+   { id: 2, name: 'javaScript' }
+];
+
+console.log(unsorted);
+
+unsorted.sort();
+console.log(unsorted);
+
+// this only works when course names are all in caps
+unsorted.sort(function(a, b) {
+   // a < b => -1
+   // a > b => 1
+   // a === b => 0
+   if (a.name<b.name) return -1;
+   if (a.name>b.name) return 1;
+   return 0;
+});
+console.log(unsorted);
+
+// fix sort to handle caps and lowercase names
+unsorted.sort(function(a, b) {
+   // a < b => -1
+   // a > b => 1
+   // a === b => 0
+   const nameA = a.name.toUpperCase();
+   const nameB = b.name.toUpperCase();
+   if (nameA<nameB) return -1;
+   if (nameA>nameB) return 1;
+   return 0;
+});
+console.log(unsorted);
+
+// 14 - Filtering an Array
+let nums = [1, -1, 2, 3];
+
+let filtered = nums.filter(num => num >=0);
+console.log(filtered);
+
+// 15 - Mapping an Array
+nums = [1, -1, 2, 3];
+
+filtered = nums.filter(num => num >=0);
+// use map() to transform each element in array to something else
+let items = filtered.map(n => '<li>' + n + '</li>');
+let html = '<ul>' + items.join('') + '</ul>';
+console.log(html);
+
+// both filter() and map() return new arrays AND are chainable.
+
+// much cleaner way to write the above code
+nums = [0, 1, -1, 2, -3, 3];
+
+items = nums
+   .filter(n => n >= 0)
+   .map(n => ({ value: n }));
+
+console.log(items);
