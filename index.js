@@ -181,6 +181,7 @@ let filtered = nums.filter(num => num >=0);
 console.log(filtered);
 
 // 15 - Mapping an Array
+// *** Go back and rewatch this lesson ***
 nums = [1, -1, 2, 3];
 
 filtered = nums.filter(num => num >=0);
@@ -199,3 +200,26 @@ items = nums
    .map(n => ({ value: n }));
 
 console.log(items);
+
+// Reducing an Array
+//
+// Two options: For loop
+//              reduce()
+
+nums = [1, -1, 2, 3];
+let sum = 0;
+for (let n of nums)
+   sum += n;
+
+console.log(sum);
+
+sum = nums.reduce( (accumulator, currentValue) => {
+   return accumulator + currentValue;
+}, 0);
+console.log(sum);
+
+// we can further clean-up this code to
+sum = nums.reduce(
+   (accumulator, currentValue) => accumulator + currentValue
+);
+console.log(sum);
