@@ -211,15 +211,57 @@ let sum = 0;
 for (let n of nums)
    sum += n;
 
+
+console.log("Here we go!");
 console.log(sum);
 
+// all arrarys have reduce method
+/*
+   reduce() takes 2 args, the callback function, and the initial
+   value for the accumulator. 
+   reduce() iterates over all values in array, calls callback() on 
+   each element and adds to accumulator. Where there are no more elements it returns the single value.
+*/
 sum = nums.reduce( (accumulator, currentValue) => {
    return accumulator + currentValue;
 }, 0);
 console.log(sum);
 
 // we can further clean-up this code to
+/*  If you skip passing an initialization value, 
+    reduce() initializes the accumulator to the first value,
+    and sets the currentValue to the 2nd item in the array.
+    Ultimately, this skips a pass through the loop.
+
+    Furthermore, since there is only one line, you can drop the
+    return stmt and curly braces and pull up.
+*/
 sum = nums.reduce(
    (accumulator, currentValue) => accumulator + currentValue
 );
 console.log(sum);
+
+// Exercise 17-1 Array from Range
+
+function arrayFromRange(min, max) {
+   const nums = [];
+   let num = min;
+   while (num <= max) {
+      nums.push(num);
+      num++
+   }
+   return nums;
+}
+
+function betterFromRange(min, max) {
+   const output = [];
+   for (let i=min; i<=max; i++)
+      output.push(i);
+   return output;
+}
+
+const exer17 = arrayFromRange(1, 4);
+console.log(exer17);
+
+const exer17_2 = betterFromRange(1, 4);
+console.log(exer17_2);
