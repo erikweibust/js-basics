@@ -265,3 +265,25 @@ console.log(exer17);
 
 const exer17_2 = betterFromRange(1, 4);
 console.log(exer17_2);
+
+// Exercise 17-2 Includes
+
+function includes(array, searchElement) {
+   if (array.indexOf(searchElement) == 1)
+      return true;
+   return false;
+}
+
+function includes2(array, searchElement) {
+   for (let element of array) 
+      if (element === searchElement)
+         return true;
+      return false;
+}
+
+const arr = [1, 2, 3, 4];
+console.log(includes(arr, 2));
+console.log(includes(arr, -2));
+
+console.log(includes2(arr, 2));
+console.log(includes2(arr, -2));
