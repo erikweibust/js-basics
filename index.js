@@ -287,3 +287,36 @@ console.log(includes(arr, -2));
 
 console.log(includes2(arr, 2));
 console.log(includes2(arr, -2));
+
+// Exercise 19-3 - Except
+const numbers19_3 = [1, 2, 3, 4, 1, 1];
+
+// my except only works when excluded has one element :(
+function except(array, excluded) {
+   const return_array = [];
+   
+   for (let number of array) {
+      if (number != excluded)
+         return_array.push(number);
+   }
+
+   return return_array;
+}
+
+function except2(array, excluded) {
+   const return_array = [];
+
+   for (let element of array) {
+      if (!excluded.includes(element)) {
+         return_array.push(element);
+      }
+   }
+
+   return return_array;
+}
+
+const output19_3 = except(numbers19_3, [1, 2]);
+console.log(output19_3);
+
+const output19_32 = except2(numbers19_3, [1, 2]);
+console.log(output19_32);
